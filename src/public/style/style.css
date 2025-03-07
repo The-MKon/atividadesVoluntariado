@@ -1,18 +1,149 @@
-body {
-    font-family: Arial, sans-serif;
+/* Resetando margens e padding para todos os elementos */
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
+    box-sizing: border-box;
 }
-#root {
-    width: 100%;
-    max-width: 600px;
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
     padding: 20px;
-    background: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container principal */
+#root {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Cartão de atividades */
+div {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #34495e;
+}
+
+p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+/* Botões */
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px 0;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Formulário de edição */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Estilo para o botão de logout */
+#logout-btn {
+    background-color: #e74c3c;
+    margin-top: 20px;
+}
+
+#logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Estilo do botão de admin, visível apenas para administradores */
+#admin-btn {
+    display: inline-block;
+    background-color: #2ecc71;
+    margin-top: 20px;
+}
+
+#admin-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Estilo para o cabeçalho da página de login */
+#login-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#login-header h1 {
+    font-size: 2.5rem;
+    color: #3498db;
+}
+
+/* Layout responsivo */
+@media (max-width: 768px) {
+    /* Ajustar o layout para dispositivos móveis */
+    body {
+        padding: 10px;
+    }
+
+    #root {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    div {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    input, textarea {
+        width: 100%;
+        font-size: 1rem;
+    }
 }
